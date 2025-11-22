@@ -15,7 +15,8 @@ export default function App() {
         alignItems: "center",
         justifyContent: "center",
         padding: "24px",
-        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+        fontFamily:
+          'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
       <div style={{ maxWidth: 420, width: "100%" }}>
@@ -34,7 +35,7 @@ export default function App() {
         <BuyWidget
           client={client}
           chain={base}
-          amount="50"     // default $50; user can change
+          amount="50"   // $50 default; user can change
           currency="USD"
           theme="dark"
         />
