@@ -1,5 +1,8 @@
 // src/App.jsx
 import React from "react";
+import { BuyWidget } from "thirdweb/react";
+import { base } from "thirdweb/chains";
+import { client } from "./thirdwebClient";
 
 export default function App() {
   return (
@@ -11,10 +14,31 @@ export default function App() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        fontSize: "24px",
+        padding: "24px",
+        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
       }}
     >
-      HELLO PATRONIUM
+      <div style={{ maxWidth: 420, width: "100%" }}>
+        <h1
+          style={{
+            textTransform: "uppercase",
+            letterSpacing: "0.18em",
+            fontSize: "0.9rem",
+            textAlign: "center",
+            marginBottom: "18px",
+          }}
+        >
+          Buy Polo Patronium (PATRON)
+        </h1>
+
+        <BuyWidget
+          client={client}
+          chain={base}
+          amount="50"     // default $50; user can change
+          currency="USD"
+          theme="dark"
+        />
+      </div>
     </div>
   );
 }
