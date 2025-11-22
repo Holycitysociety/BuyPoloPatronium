@@ -1,3 +1,4 @@
+// src/App.jsx
 import React from "react";
 import { BuyWidget } from "thirdweb/react";
 import { base } from "thirdweb/chains";
@@ -36,14 +37,13 @@ function App() {
         <BuyWidget
           client={client}
           chain={base}
-          amount="50"                 // default $50, user can change
-          currency="USD"              // pay in USD-equivalent
-          tokenAddress={PATRON_ADDRESS}   // token they are buying
-          receiverAddress={TREASURY_ADDRESS} // who receives the funds
+          amount="50"                 // default $50; user can change
+          currency="USD"
+          tokenAddress={PATRON_ADDRESS}
+          recipient={TREASURY_ADDRESS}
           theme="dark"
           title="Polo Patronium"
           description="Official patronage token of the USPPA"
-          showThirdwebBranding={false}
         />
       </div>
     </div>
